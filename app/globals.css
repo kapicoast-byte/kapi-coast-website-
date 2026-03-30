@@ -1,0 +1,16 @@
+@import '../styles/tokens.css';
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  background: var(--kc-parchment);
+  font-family: var(--font-body);
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
