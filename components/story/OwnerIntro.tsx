@@ -56,7 +56,7 @@ export default function OwnerIntro() {
           ref={ref}
           initial={{ opacity: 0, x: 40 }}
           animate={inView ? { opacity: 1, x: 0 } : {}}
-          transition={{ duration: 0.8, ease: "easeOut" }}
+          transition={{ duration: 0.8, ease: [0.25, 0.1, 0.25, 1] as const }}
           style={{ flex: "1 1 60%" }}
         >
           {/* Section label */}

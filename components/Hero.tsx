@@ -1,11 +1,11 @@
 "use client";
 
-import { motion } from "framer-motion";
+import { motion, Variants } from "framer-motion";
 
 /* ── Framer Motion variants ── */
-const fadeUp = (delay: number) => ({
+const fadeUp = (delay: number): Variants => ({
   hidden:  { opacity: 0, y: 24 },
-  visible: { opacity: 1, y: 0, transition: { duration: 0.7, delay, ease: "easeOut" } },
+  visible: { opacity: 1, y: 0, transition: { duration: 0.7, delay, ease: [0.25, 0.1, 0.25, 1] as const } },
 });
 
 export default function Hero() {
@@ -163,7 +163,7 @@ export default function Hero() {
       <motion.div
         className="absolute bottom-8 left-1/2 -translate-x-1/2 z-10 flex flex-col items-center gap-1"
         animate={{ y: [0, 8, 0] }}
-        transition={{ duration: 1.4, repeat: Infinity, ease: "easeInOut" }}
+        transition={{ duration: 1.4, repeat: Infinity, ease: [0.42, 0, 0.58, 1] as const }}
       >
         <span
           style={{ background: "#C8882A" }}

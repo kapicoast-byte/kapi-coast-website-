@@ -115,7 +115,7 @@ export default function Navbar() {
             initial={{ height: 0, opacity: 0 }}
             animate={{ height: "auto", opacity: 1 }}
             exit={{ height: 0, opacity: 0 }}
-            transition={{ duration: 0.25, ease: "easeInOut" }}
+            transition={{ duration: 0.25, ease: [0.42, 0, 0.58, 1] as const }}
             style={{ background: "var(--kc-dark)" }}
             className="overflow-hidden lg:hidden"
           >

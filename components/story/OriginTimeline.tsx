@@ -47,7 +47,7 @@ function TimelineItem({
       <motion.div
         initial={{ opacity: 0, x: -40 }}
         animate={inView && isLeft ? { opacity: 1, x: 0 } : isLeft ? {} : { opacity: 0 }}
-        transition={{ duration: 0.7, delay: index * 0.1, ease: "easeOut" }}
+        transition={{ duration: 0.7, delay: index * 0.1, ease: [0.25, 0.1, 0.25, 1] as const }}
         className="w-[calc(50%-32px)] pr-6 text-right"
         style={{ visibility: isLeft ? "visible" : "hidden" }}
       >
@@ -99,7 +99,7 @@ function TimelineItem({
       <motion.div
         initial={{ opacity: 0, x: 40 }}
         animate={inView && !isLeft ? { opacity: 1, x: 0 } : !isLeft ? {} : { opacity: 0 }}
-        transition={{ duration: 0.7, delay: index * 0.1, ease: "easeOut" }}
+        transition={{ duration: 0.7, delay: index * 0.1, ease: [0.25, 0.1, 0.25, 1] as const }}
         className="w-[calc(50%-32px)] pl-6 text-left"
         style={{ visibility: !isLeft ? "visible" : "hidden" }}
       >

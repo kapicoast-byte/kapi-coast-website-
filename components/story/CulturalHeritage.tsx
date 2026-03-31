@@ -25,7 +25,7 @@ export default function CulturalHeritage() {
           ref={leftRef}
           initial={{ opacity: 0, x: -40 }}
           animate={leftIn ? { opacity: 1, x: 0 } : {}}
-          transition={{ duration: 0.8, ease: "easeOut" }}
+          transition={{ duration: 0.8, ease: [0.25, 0.1, 0.25, 1] as const }}
           style={{ flex: "1 1 50%" }}
         >
           <h2
@@ -65,7 +65,7 @@ export default function CulturalHeritage() {
           ref={rightRef}
           initial={{ opacity: 0, x: 40 }}
           animate={rightIn ? { opacity: 1, x: 0 } : {}}
-          transition={{ duration: 0.8, ease: "easeOut", delay: 0.15 }}
+          transition={{ duration: 0.8, ease: [0.25, 0.1, 0.25, 1] as const, delay: 0.15 }}
           className="grid grid-cols-2 gap-4"
           style={{ flex: "1 1 50%" }}
         >

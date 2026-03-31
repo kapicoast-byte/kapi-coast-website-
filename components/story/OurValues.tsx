@@ -88,7 +88,7 @@ function ValueCard({ Icon, title, body, index }: (typeof VALUES)[number] & { ind
       ref={ref}
       initial={{ opacity: 0, y: 32 }}
       animate={inView ? { opacity: 1, y: 0 } : {}}
-      transition={{ duration: 0.6, delay: index * 0.1, ease: "easeOut" }}
+      transition={{ duration: 0.6, delay: index * 0.1, ease: [0.25, 0.1, 0.25, 1] as const }}
       style={{
         background: "#FFFFFF",
         borderLeft: "4px solid #C8882A",
