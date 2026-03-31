@@ -11,7 +11,7 @@ const NAV_LINKS = [
   { label: "DRINKS",      href: "#drinks" },
   { label: "OUR STORY",   href: "/story" },
   { label: "ABOUT US",    href: "#about" },
-  { label: "CONTACT US",  href: "#contact" },
+  { label: "CONTACT US",  href: "/contact" },
 ];
 
 export default function Navbar() {
@@ -66,7 +66,7 @@ export default function Navbar() {
 
         {/* ── ORDER ONLINE button ── */}
         <a
-          href="#order"
+          href="/menu"
           style={{
             fontFamily: "var(--font-body)",
             color: "var(--kc-white)",
@@ -137,7 +137,7 @@ export default function Navbar() {
               ))}
               <li className="pt-3">
                 <a
-                  href="#order"
+                  href="/menu"
                   style={{
                     fontFamily: "var(--font-body)",
                     color: "var(--kc-white)",
