@@ -9,6 +9,7 @@ const NAV_LINKS = [
   { label: "BAKERY",      href: "#bakery" },
   { label: "SWEET TOOTH", href: "#sweet-tooth" },
   { label: "DRINKS",      href: "#drinks" },
+  { label: "OUR STORY",   href: "/story" },
   { label: "ABOUT US",    href: "#about" },
   { label: "CONTACT US",  href: "#contact" },
 ];
