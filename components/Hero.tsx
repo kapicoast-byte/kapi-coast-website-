@@ -109,7 +109,7 @@ export default function Hero() {
           }}
           className="mt-4 max-w-md"
         >
-          Chennai's favourite traditions — sip, snack, and get back on track.
+          Chennai&apos;s favourite traditions — sip, snack, and get back on track.
         </motion.p>
 
         {/* CTA buttons */}
