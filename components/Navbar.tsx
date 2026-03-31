@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import Image from "next/image";
 import { motion, AnimatePresence } from "framer-motion";
 
 const NAV_LINKS = [
@@ -11,59 +12,6 @@ const NAV_LINKS = [
   { label: "ABOUT US",    href: "#about" },
   { label: "CONTACT US",  href: "#contact" },
 ];
-
-function CoffeeCupIcon() {
-  return (
-    <svg
-      width="36"
-      height="36"
-      viewBox="0 0 36 36"
-      fill="none"
-      xmlns="http://www.w3.org/2000/svg"
-      aria-hidden="true"
-    >
-      {/* Cup body */}
-      <path
-        d="M6 12h20l-2.5 14a2 2 0 01-1.97 1.7H10.47A2 2 0 018.5 26L6 12z"
-        fill="#C8882A"
-        stroke="#F5E6C8"
-        strokeWidth="0.8"
-      />
-      {/* Handle */}
-      <path
-        d="M26 15.5c3 0 5 1.2 5 3.5s-2 3.5-5 3.5"
-        stroke="#F5E6C8"
-        strokeWidth="1.8"
-        strokeLinecap="round"
-        fill="none"
-      />
-      {/* Saucer */}
-      <ellipse cx="16" cy="27.8" rx="10" ry="1.8" fill="#A0642A" />
-      {/* Steam wisps */}
-      <path
-        d="M12 9c0-1.5 2-1.5 2-3"
-        stroke="#EDD5A0"
-        strokeWidth="1.2"
-        strokeLinecap="round"
-        fill="none"
-      />
-      <path
-        d="M16 8c0-1.5 2-1.5 2-3"
-        stroke="#EDD5A0"
-        strokeWidth="1.2"
-        strokeLinecap="round"
-        fill="none"
-      />
-      <path
-        d="M20 9c0-1.5 2-1.5 2-3"
-        stroke="#EDD5A0"
-        strokeWidth="1.2"
-        strokeLinecap="round"
-        fill="none"
-      />
-    </svg>
-  );
-}
 
 export default function Navbar() {
   const [mobileOpen, setMobileOpen] = useState(false);
@@ -77,28 +25,16 @@ export default function Navbar() {
         {/* ── Logo ── */}
         <a
           href="/"
-          className="flex items-center gap-2.5 shrink-0 mr-8 group"
+          className="flex items-center gap-2.5 shrink-0 mr-8"
           aria-label="Kapi Coast home"
         >
-          <CoffeeCupIcon />
-          <div className="leading-none">
-            <span
-              style={{
-                fontFamily: "var(--font-heading)",
-                color: "var(--kc-cream)",
-                letterSpacing: "0.12em",
-              }}
-              className="block text-base font-bold tracking-widest"
-            >
-              KAPI COAST
-            </span>
-            <span
-              style={{ color: "var(--kc-warm)", fontFamily: "var(--font-body)" }}
-              className="block text-[11px] tracking-wide mt-0.5"
-            >
-              காபி கோஸ்ட்
-            </span>
-          </div>
+          <Image
+            src="/images/logo.png"
+            width={44}
+            height={44}
+            alt="Kapi Coast logo"
+            className="object-contain"
+          />
         </a>
 
         {/* ── Desktop nav links (centred, flex-1) ── */}

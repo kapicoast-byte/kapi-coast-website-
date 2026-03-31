@@ -1,24 +1,25 @@
+import Hero from "@/components/Hero";
+
 export default function Home() {
   return (
-    <div
-      style={{
-        background: "var(--kc-brown)",
-        minHeight: "100vh",
-        display: "flex",
-        alignItems: "center",
-        justifyContent: "center",
-      }}
-    >
-      <p
-        style={{
-          color: "#FFFFFF",
-          fontFamily: "var(--font-heading)",
-          fontSize: "48px",
-          textAlign: "center",
-        }}
+    <>
+      <Hero />
+
+      {/* Temporary placeholder — verifies wave transition */}
+      <div
+        style={{ background: "#F9F0E0" }}
+        className="h-screen flex items-center justify-center"
       >
-        Kapi Coast — coming soon
-      </p>
-    </div>
+        <p
+          style={{
+            fontFamily: "var(--font-heading)",
+            color: "#5C3A1E",
+            fontSize: "24px",
+          }}
+        >
+          Next section coming soon
+        </p>
+      </div>
+    </>
   );
 }
