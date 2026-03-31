@@ -6,7 +6,7 @@ import OurValues        from "@/components/story/OurValues";
 import CulturalHeritage from "@/components/story/CulturalHeritage";
 
 export const metadata: Metadata = {
-  title: "Our Story | Kapi Coast — Chennai's South Indian Cafe",
+  title: "Our Story | Kapi Coast — Chennai South Indian Cafe",
   description:
     "Learn how Kapi Coast was born from a love of authentic South Indian filter coffee, Andhra snacks and Tamil heritage. Meet the people behind every cup.",
 };
@@ -14,7 +14,6 @@ export const metadata: Metadata = {
 export default function StoryPage() {
   return (
     <>
-      {/* JSON-LD structured data */}
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{
@@ -22,8 +21,7 @@ export default function StoryPage() {
             "@context": "https://schema.org",
             "@type": "AboutPage",
             name: "Our Story — Kapi Coast",
-            description:
-              "The story of Kapi Coast, Chennai's South Indian cafe serving filter coffee, Andhra snacks and Tamil heritage since 2019.",
+            description: "The story of Kapi Coast, Chennai South Indian cafe.",
             url: "https://kapicoast.com/story",
           }),
         }}

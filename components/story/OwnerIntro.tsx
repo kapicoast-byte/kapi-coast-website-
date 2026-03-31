@@ -8,58 +8,51 @@ export default function OwnerIntro() {
   const inView = useInView(ref, { once: true, margin: "-80px" });
 
   return (
-    <section style={{ background: "#F9F0E0", padding: "80px 0" }}>
-      <div className="max-w-screen-xl mx-auto px-6 flex flex-col md:flex-row items-center gap-12 md:gap-16">
+    <section style={{ background: "#F9F0E0" }} className="py-20">
+      <div className="max-w-screen-xl mx-auto px-6 grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
 
-        {/* ── LEFT: founder portrait ── */}
-        <div className="flex flex-col items-center shrink-0" style={{ flex: "0 0 40%" }}>
-          {/* Circular image / initials placeholder */}
+        {/* ── LEFT: founder circle ── */}
+        <div>
           <div
+            className="mx-auto flex items-center justify-center"
             style={{
               width: 260,
               height: 260,
               borderRadius: "50%",
               border: "4px solid #C8882A",
               background: "#8B5E2E",
-              display: "flex",
-              alignItems: "center",
-              justifyContent: "center",
             }}
           >
             <span
               style={{
                 fontFamily: "var(--font-heading)",
-                color: "#FFFFFF",
-                fontSize: 48,
                 fontWeight: 700,
-                lineHeight: 1,
+                fontSize: 48,
+                color: "#FFFFFF",
               }}
             >
               KC
             </span>
           </div>
-          {/* Caption */}
           <p
+            className="text-center mt-4"
             style={{
               fontFamily: "var(--font-body)",
               fontSize: 13,
               color: "#A0642A",
-              marginTop: 14,
             }}
           >
             Founder, Kapi Coast
           </p>
         </div>
 
-        {/* ── RIGHT: text ── */}
+        {/* ── RIGHT: text (slides in) ── */}
         <motion.div
           ref={ref}
           initial={{ opacity: 0, x: 40 }}
           animate={inView ? { opacity: 1, x: 0 } : {}}
           transition={{ duration: 0.8, ease: [0.25, 0.1, 0.25, 1] as const }}
-          style={{ flex: "1 1 60%" }}
         >
-          {/* Section label */}
           <p
             style={{
               fontFamily: "var(--font-body)",
@@ -67,13 +60,12 @@ export default function OwnerIntro() {
               letterSpacing: "0.15em",
               color: "#C8882A",
               textTransform: "uppercase",
-              marginBottom: 16,
+              marginBottom: 12,
             }}
           >
-            The Person Behind The Cup
+            THE PERSON BEHIND THE CUP
           </p>
 
-          {/* Heading */}
           <h2
             style={{
               fontFamily: "var(--font-heading)",
@@ -87,25 +79,35 @@ export default function OwnerIntro() {
             A love letter to South Indian mornings
           </h2>
 
-          {/* Body paragraphs */}
-          {[
-            "Every great cafe starts with a memory. For us, it was the sound of a brass dabara tumbler hitting the steel plate at 5am, the thick aroma of freshly brewed filter kaapi drifting through a Chennai morning.",
-            "Kapi Coast was built on that memory — and a belief that South India's food culture deserves a space that celebrates it with pride. Not a copy of something Western, but something entirely, unapologetically ours.",
-          ].map((para, i) => (
-            <p
-              key={i}
-              style={{
-                fontFamily: "var(--font-body)",
-                fontSize: 16,
-                color: "#5C3A1E",
-                lineHeight: 1.8,
-                marginBottom: i === 0 ? 16 : 0,
-              }}
-            >
-              {para}
-            </p>
-          ))}
+          <p
+            style={{
+              fontFamily: "var(--font-body)",
+              fontSize: 16,
+              color: "#5C3A1E",
+              lineHeight: 1.75,
+            }}
+          >
+            Every great cafe starts with a memory. For us, it was the sound of a
+            brass dabara tumbler hitting the steel plate at 5am, the thick aroma
+            of freshly brewed filter kaapi drifting through a Chennai morning.
+          </p>
+
+          <p
+            style={{
+              fontFamily: "var(--font-body)",
+              fontSize: 16,
+              color: "#5C3A1E",
+              lineHeight: 1.75,
+              marginTop: 16,
+            }}
+          >
+            Kapi Coast was built on that memory — and a belief that South
+            India&apos;s food culture deserves a space that celebrates it with
+            pride. Not a copy of something Western, but something entirely,
+            unapologetically ours.
+          </p>
         </motion.div>
+
       </div>
     </section>
   );
